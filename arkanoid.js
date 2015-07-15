@@ -687,9 +687,9 @@ function playAudio(url,loop) {
 		
 		my_media = new Media(uri,
 				// success callback
-				 function () {/*ns.reproduciendo=1;*/},
+				 function () {/*ns.reproduciendo=1;*/alert('ok');},
 				// error callback
-				 function (err) { /*alert("playAudio():Audio Error: " + err.code);*/ },l
+				 function (err) { alert("playAudio():Audio Error: " + err.code); },l
 		);
 			   // Play audio
 		my_media.play();
