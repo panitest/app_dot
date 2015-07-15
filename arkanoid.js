@@ -1,3 +1,11 @@
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
 function seg2hora(seg){
 	var hs=Math.floor(seg/3600);
 	var s=seg-(hs*3600);
@@ -173,7 +181,8 @@ function drawInicial(){
 	ctx.drawImage(pad,padx,pady);
 	x=padx-15+(padWidth/2);
 	y=479;
-	setTimeout(drawInicial,10);
+	//setTimeout(drawInicial,10);
+	requestAnimFrame( drawInicial );
 }
 function draw(){
 	if(ns.finarkanoid)return;
@@ -258,7 +267,8 @@ function draw(){
 		
 		});
 	
-	setTimeout(draw,10);
+	//setTimeout(draw,10);
+	requestAnimFrame( draw );
 }
 function drawFinal(x,y,dx,dy,t){
 	if(ns.finarkanoid)return;
@@ -287,7 +297,8 @@ function drawFinal(x,y,dx,dy,t){
 	ctx.drawImage(pelota,x,y);
 	ctx.drawImage(pad,padx,pady);
 	if(!t){
-		setTimeout(function(){drawFinal(x,y,dx,dy,1);},10);
+		//setTimeout(function(){drawFinal(x,y,dx,dy,1);},10);
+		requestAnimFrame( function(){drawFinal(x,y,dx,dy,1);} );
 	}else{
 		ns.vidas--;
 		if(ns.vidas==2){
@@ -308,7 +319,8 @@ function drawFinal(x,y,dx,dy,t){
 			ns.start=0;
 			
 				if(ns.vidas){
-					setTimeout(drawInicial,50);
+					//setTimeout(drawInicial,50);
+					requestAnimFrame( drawInicial );
 				}else{
 					clearTimeout(ns.contador);
 				
