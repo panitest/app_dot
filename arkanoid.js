@@ -21,7 +21,9 @@ function contar(){
 		$('qq').innerHTML='';
 		$('cronometro').innerHTML='00:00';
 		cerrar();
-		//$('fail').play();
+		
+		
+		playAudio('sounds/fail.mp3',0);
 		
 		openPerdiste();
 		
@@ -309,7 +311,7 @@ function drawFinal(x,y,dx,dy,t){
 				
 					openPerdiste();
 					
-					//$('fail').play();
+					playAudio('sounds/fail.mp3',0);
 				}
 				
 			};
@@ -577,7 +579,7 @@ function contar2(){
 		$('qq').innerHTML='';
 		$('cronometro2').innerHTML='00:00';
 		cerrar();
-		//$('fail').play();
+		playAudio('sounds/fail.mp3',0);
 		
 		openPerdiste();
 		
@@ -677,3 +679,18 @@ function IrBrajando(){
 	$('barajando').innerHTML=html;
 	
 }
+function playAudio(url,loop) {
+		var uri;
+		var my_media;
+		var l=loop?function(s){if (s === Media.MEDIA_STOPPED /*&& ns.loop*/){my_media.play();}}:null;
+		uri='/android_asset/www/'+url;
+		
+		my_media = new Media(uri,
+				// success callback
+				 function () {/*ns.reproduciendo=1;*/},
+				// error callback
+				 function (err) { /*alert("playAudio():Audio Error: " + err.code);*/ },l
+		);
+			   // Play audio
+		my_media.play();
+	}
