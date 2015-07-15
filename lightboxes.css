@@ -1,0 +1,108 @@
+#lightboxes{ display:block; width:966px; height:604px; position:fixed; left:50%; margin-left:-483px; top:50%; margin-top:-322px; z-index:5000 }
+.lightfinal{display:none; width:966px; height:604px; position:fixed; left:50%; margin-left:-483px; top:50%; margin-top:-322px; z-index:5000; background: url(images/memotest/findejuego_lightbox.png) center center no-repeat;}
+.lightcomojugar{ background:  url(images/memotest/comojugar_lightbox.png) center center no-repeat;}
+.lightformulario{ background:  url(images/memotest/formulario_lightbox.png) center center no-repeat;display:none; width:966px; height:604px; position:fixed; left:50%; margin-left:-483px; top:50%; margin-top:-322px; z-index:5000; }
+
+.cajalight1{
+	width:456px;
+	height:307px;
+	position:absolute;
+	top:148px;
+	left:50%;
+	margin-left:-228px;
+	text-align:center;
+	color:#F19516;
+}
+
+.cajalight2{
+	width:651px;
+	height:384px;
+	position:absolute;
+	top:118px;
+	left:386px;
+	margin-left:-228px;
+	text-align:center;
+	color:#FFA500;
+}
+
+.cajalight3{
+	width:456px;
+	height:307px;
+	position:absolute;
+	top:117px;
+	left:50%;
+	margin-left:-228px;
+	text-align:center;
+	color:#F19516;
+}
+
+.fthin{font-family: 'gotham_thinregular';}
+.fbold{font-family: 'gotham_boldregular';}
+.fbook{font-family: 'gotham_bookregular';}
+.flight{font-family: 'gotham_lightregular';}
+.fmedium{font-family: 'gotham_mediumregular';}
+
+
+.btvolverajugar{
+	display:block; cursor:pointer;
+	width:216px;
+	height:88px;
+	background:url(images/memotest/bt_volverajugar.png) no-repeat;
+	position:absolute;
+	left: 14px;
+	top: 154px;
+}
+.btelegirotro{
+	display:block; cursor:pointer;
+	width:216px;
+	height:88px;
+	background: url(images/memotest/bt_elegirotrojuego.png) no-repeat;
+	position:absolute;
+	left: 231px;
+	top: 154px;
+}
+.btcompartirpuntos{
+	display:block;
+	cursor:pointer;
+	width:216px;
+	height:88px;
+	background: url(images/memotest/bt_compartirpuntos.png) no-repeat;
+	position:absolute;
+	left: 119px;
+	top: 251px;
+}
+
+.btcontinuar{
+	display:block; cursor:pointer;
+	width:216px;
+	height:88px;
+	background:  url(images/memotest/bt_continuar.png) no-repeat;
+	position:relative;
+	left:50%; margin-left:-108px; margin-top:15px;-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+}
+.btcontinuar:hover{ -webkit-transform: scale(1.05,1.05);   
+     -moz-transform: scale(1.05,1.05);  
+      -ms-transform: scale(1.05,1.05); 
+       -o-transform: scale(1.05,1.05); 
+          transform: scale(1.05,1.05);}
+.btcomenzar{
+	display:block;
+	cursor:pointer;
+	width:216px;
+	height:88px;
+	background:  url(images/memotest/bt_comenzar.png) no-repeat;
+	position:absolute;
+	left: 218px;
+	top: 285px;
+}
+
+.btcompartirpuntos:hover, .btelegirotro:hover, .btvolverajugar:hover, .btcomenzar:hover{filter:alpha(opacity=60); opacity:0.6;}
+
+.lineaform{ display:block; width:390px; height:43px; left:50%; margin-left:-195px; position:relative; margin-bottom:5px; font-size:20px; text-align:left; line-height:43px;}
+
+.cajaform{ display:block; width:250px; height:43px; line-height:43px; position:absolute; top:0px; right:0px; background-color:#D2D2D2; border:none; font-size:20px; color:#fff; padding-left:10px; padding-right:10px;}

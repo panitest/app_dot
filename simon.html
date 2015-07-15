@@ -1,0 +1,76 @@
+
+<div id="bglightbox2"><img id="loadsimon" src="images/ajax-loader.gif" width="16" height="11"></div>
+
+<div id="bglightbox" style="display:block;"></div>
+<div id="lightboxes" class=" lightcomojugar">
+  <div class="cajalight2">
+  <div class=" fbold" style="font-size:36px;  line-height:55px;">¿Cómo Jugar?</div><br />
+   <div class=" fthin" style="font-size:21px;">
+   <div style="text-align:left; padding:5px 10px; line-height:40px">Debes imitar el orden en que se irán encendiendo los personajes Disney.
+
+Al principio será fácil pero luego deberás usar tu memoria para sumar más
+puntos. <strong>¡Comienza ahora!</strong></div>
+</div>
+   <div class=" btcomenzar" onClick="closeComoJugar()"></div>
+  </div>
+</div>
+
+<div id="perdiste" class=" lightfinal">
+  <div class="cajalight1">
+  <div class=" fbold" style="font-size:36px;">¡Ups!</div><br />
+   <div class=" fmedium" style="font-size:25px; line-height:8px;">¡No imitaste bien la secuencia!</div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">¿Te animás a probar de nuevo?</div>
+  <div class="btvolverajugar" onClick="simon()"></div>
+  <div class="btelegirotro" onClick="homes()"></div>
+  </div>
+</div>
+
+
+
+<div id="ganaste" class=" lightfinal">
+  <div class="cajalight1">
+  <div class=" fbold" style="font-size:36px;">Felicitaciones</div><br />
+   <div class=" fmedium" style="font-size:25px; line-height:8px;" id="ptolb"></div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">¿Podrás superarte?</div>
+  <div class="btvolverajugar" onClick="simon()"></div>
+  <div class="btelegirotro" onClick="homes()"></div>
+  
+  </div>
+</div>
+
+
+
+
+
+<div style="width:0; height:0; overflow:hidden;">
+<img src="images/simon/1_on.png" width="106" height="186">
+<img src="images/simon/2_on.png" width="171" height="175">
+<img src="images/simon/3_on.png" width="102" height="218">
+<img src="images/simon/4_on.png" width="138" height="198">
+<img  src="images/simon/ic_dot.png" width="90" height="90">  <img  src="images/simon/ic_jugador.png" width="90" height="90">
+</div>
+<img  onclick="homes()" id="btnvolver" src="images/btnvolver.png" width="48" height="48" title="volver">
+<div id="contenedorgeneral">
+<div id="cajabasedetodo">
+<div id="score">Puntos: 0</div>
+<div class="puntosganados2" id="bonustiempo">+1</div>
+<div id="canvas" style="position:absolute; top:40px; left:0; width:558px; height:564px; background:url(images/simon/cuadro.png) center center no-repeat;">
+
+  
+<img onMouseDown="return false" id="im1" src="images/simon/1.png" width="106" height="186">
+<img onMouseDown="return false" id="im2" src="images/simon/2.png" width="171" height="175">
+<img onMouseDown="return false" id="im3" src="images/simon/3.png" width="102" height="218">
+<img onMouseDown="return false" id="im4" src="images/simon/4.png" width="138" height="198">
+<div id="mse"><img onClick="setAudio();$('mse').innerHTML='<img id=&quot;pc&quot; src=&quot;images/simon/ic_dot.png&quot; width=&quot;90&quot; height=&quot;90&quot;>  <img id=&quot;humano&quot; src=&quot;images/simon/ic_jugador.png&quot; width=&quot;90&quot; height=&quot;90&quot;>';setTimeout(miTurno,2000);" id="btncomenzar" src="images/simon/bt_comenzar.png" width="216" height="88"></div>
+
+
+
+</div>
+
+
+
+<div class="logodisney"></div>
+<div class="personajes"></div>
+</div>
+</div>
+

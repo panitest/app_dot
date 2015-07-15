@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/raleway-regular-webfont.eot');
+    src: url('fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway-regular-webfont.woff') format('woff'),
+         url('fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*{margin:0; padding:0; outline:none;}
+img{ -webkit-tap-highlight-color: rgba(0,0,0,0); }
+html,body{width: 100%; height:100%; margin:0; padding:0;  background:url(images/memotest/back_general.jpg) center center;  font-family: 'Raleway', sans-serif;  } 
+
+textarea{resize:none}
+
+.limpiar{ clear:both;}
+
+#contenedorgeneral,#contenedorgeneral2{ display:block; width:100%; height:100%; position:relative;
+clear:both!important;
+        display:block!important;
+        width:100%!important;
+        float:none!important;
+        margin:0!important;
+        padding:0!important; }
+		
+#cajabasedetodo{ display:block; width:966px; height:604px; position:absolute; left:50%; margin-left:-483px; overflow:hidden; /*-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.75);*/
+ top:50%; margin-top:-302px;
+}
+.memotest{ background:url(images/memotest/tablero.png) center center no-repeat;}
+
+.cajamemotest{
+	display:block;
+	width:456px;
+	height:456px;
+	position:absolute;
+	top:62px;
+	left:58px;
+}
+
+.fichabasesimon{ display:block; width:117px; height:88px;  float:left; cursor:pointer; -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;perspective: 1000;transform-style: preserve-3d;position: relative;}
+
+.fichabase{ display:block; width:152px; height:114px;  float:left; cursor:pointer; -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;-webkit-perspective:1000;perspective: 1000;transform-style: preserve-3d;position: relative; -webkit-transform-style: preserve-3d;}
+.fichabase:hover{ -webkit-transform: scale(1.05,1.05);   
+     -moz-transform: scale(1.05,1.05);  
+      -ms-transform: scale(1.05,1.05); 
+       -o-transform: scale(1.05,1.05); 
+          transform: scale(1.05,1.05);
+}
+.front, .back {
+	backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+	position: absolute;
+	top: 0;
+	left: 0;   -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateX(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);
+}
+
+.dot{background:url(images/memotest/fichas_base.png) center center no-repeat;}
+
+.ficha1{background:url(images/memotest/ficha1.png) center center no-repeat;}
+.ficha2{background:url(images/memotest/ficha2.png) center center no-repeat;}
+.ficha3{background:url(images/memotest/ficha3.png) center center no-repeat;}
+.ficha4{background:url(images/memotest/ficha4.png) center center no-repeat;}
+.ficha5{background:url(images/memotest/ficha5.png) center center no-repeat;}
+.ficha6{background:url(images/memotest/ficha6.png) center center no-repeat;}
+
+.lions{
+	display:block;
+	background:url(images/memotest/king-lion.png) center bottom no-repeat;
+	width:238px;
+	height:174px;
+	position:absolute;
+	left:81px;
+	bottom:0px;
+	z-index:0;
+}
+
+.logodisney{ display:block; background:url(images/memotest/logodisneydot.png)center center no-repeat; width:380px; height:138px; position:absolute; top:0px; right:0px;}
+.personajes{display:block; background:url(images/memotest/personajes.png)center center no-repeat; width:430px; height:408px; position:absolute; bottom:0px; right:0px;}

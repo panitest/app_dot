@@ -1,0 +1,67 @@
+
+<div id="bglightbox2"><img id="loadarkanoid" src="images/ajax-loader.gif" width="16" height="11"></div>
+
+<img style="position:absolute; top:-1500px" id="moneda" src="images/arkanoid/moneda.png" width="50" height="50"> <img style="position:absolute; top:-1500px" id="cofre" src="images/arkanoid/cofre.png" width="282" height="286">
+<img  onclick="homes()" id="btnvolver" src="images/btnvolver.png" width="48" height="48" title="volver">
+<div id="bglightbox" style="display:block;"></div>
+
+<div id="lightboxes" class=" lightcomojugar">
+  <div class="cajalight2">
+  <div class=" fbold" style="font-size:36px;  line-height:55px;">¿Cómo Jugar?</div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">1) Hacé rebotar la pelotita y <strong>rompé los bloques</strong> del cofre.<br />
+2) La partida termina cuando se hayan roto todos los bloques.<br />
+3) <strong>¡Ojo!</strong> Si la pelotita se te cae 3 veces <strong>¡Perdés el juego!</strong><br />
+<br />
+¡MUCHA SUERTE!</div>
+   <div class=" btcomenzar" onClick="closeComoJugar()"></div>
+  </div>
+</div>
+
+
+
+<div id="perdiste" class=" lightfinal">
+  <div class="cajalight1">
+  <div class=" fbold" style="font-size:36px;">¡Ups!</div><br />
+   <div class=" fmedium" style="font-size:25px; line-height:8px;">¡Se te acabaron las vidas!</div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">¿Te animás a probar de nuevo?</div>
+  <div class="btvolverajugar" onClick="arkanoid()"></div>
+  <div class="btelegirotro" onClick="homes()"></div>
+  </div>
+</div>
+
+
+
+
+
+<div id="ganaste" class=" lightfinal">
+  <div class="cajalight1">
+  <div class=" fbold" style="font-size:36px;">Felicitaciones</div><br />
+   <div class=" fmedium" style="font-size:25px; line-height:8px;">¡Ganaste!</div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">¿Podrás superarte?</div>
+  <div class="btvolverajugar" onClick="arkanoid()"></div>
+  <div class="btelegirotro" onClick="homes()"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div id="contenedorgeneral">
+<div id="cajabasedetodo">
+<div class="puntosganados" id="bonustiempo">0</div>
+<div id="startmge">Hacé click para empezar</div>
+<div id="cronometro">01:00</div>
+<div style="position:absolute; background:url(images/arkanoid/vidas.png) center center no-repeat; width:122px; height:34px; left:0; top:0">
+<img id="vida1" src="images/arkanoid/dorins.png" width="15" height="15" style="position:absolute; left:47px; top:9px">
+<img id="vida2" src="images/arkanoid/dorins.png" width="15" height="15" style="position:absolute; left:71px; top:9px">
+<img id="vida3" src="images/arkanoid/dorins.png" width="15" height="15" style="position:absolute; left:95px; top:9px">
+
+</div>
+<canvas width="534" height="540" id="canvas" style="position:absolute; top:40px; background:url(images/arkanoid/recuadro.png?) center center no-repeat"></canvas>
+<div class="logodisney"></div>
+<div class="personajes"></div>
+</div>
+</div>

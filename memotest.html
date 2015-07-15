@@ -1,0 +1,68 @@
+
+<img  onclick="homes()" id="btnvolver" src="images/btnvolver.png" width="48" height="48" title="volver">
+<div id="bglightbox" style="display:block;"></div>
+
+<div id="lightboxes" class=" lightcomojugar">
+  <div class="cajalight2">
+  <div class=" fbold" style="font-size:36px;  line-height:55px;">¿Cómo Jugar?</div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">1) Hacé click en las fichas Dot para descubrir los personajes.<br />
+2) Buscalos de a pares. Ganás cuando descubrís todos.<br />
+3) <span class=" fmedium">¡Ojo!</span> Tenés 60 segundos para resolver el memotest.<br />
+<br />
+¡MUCHA SUERTE!</div>
+   <div class=" btcomenzar" onClick="closeComoJugar()"></div>
+  </div>
+</div>
+
+
+<div id="perdiste" class=" lightfinal">
+  <div class="cajalight1">
+  <div class=" fbold" style="font-size:36px;">¡Ups!</div><br />
+   <div class=" fmedium" style="font-size:25px; line-height:8px;">¡Se te acabó el tiempo!</div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">¿Te animás a probar de nuevo?</div>
+  <div class="btvolverajugar" onClick="memotest()"></div>
+  <div class="btelegirotro" onClick="homes()"></div>
+  </div>
+</div>
+
+
+
+
+
+
+<div id="ganaste" class=" lightfinal">
+  <div class="cajalight1">
+  <div class=" fbold" style="font-size:36px;">Felicitaciones</div><br />
+   <div class=" fmedium" style="font-size:25px; line-height:8px;">¡Ganaste!</div><br />
+   <div class=" fthin" style="font-size:21px; line-height:40px;">¿Podrás superarte?</div>
+  <div class="btvolverajugar" onClick="memotest()"></div>
+  <div class="btelegirotro" onClick="homes()"></div>
+  
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="contenedorgeneral">
+
+<div id="cajabasedetodo" class="memotest">
+  <div class="lions"></div>
+<div class="logodisney"></div>
+<div class="personajes"></div>
+<div class="cajamemotest" id="cajamemotestvisible">
+<div class="puntosganados3" id="bonustiempo">+20</div>
+<div id="barajando">
+
+</div>
+<div class="limpiar"></div>
+</div>
+<div id="cronometro2">01:00</div>
+</div>
+</div>

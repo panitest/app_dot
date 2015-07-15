@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Juegos Dot</title>
+<link rel="stylesheet"  href="disney2015.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet"  href="lightboxes.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet"  href="animate-custom.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet"  href="fonts/fonts.css" type="text/css" charset="utf-8" />
+<style>
+body{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background:url(images/bg.jpg) 48% center no-repeat;
+}
+.logodisney{width:300px; height:107px; background-size:100%; top:20px;}
+#j1,#j2,#j3{width:277px; height:350px; position:absolute;}
+#j1{ left:35px; top:215px; background:url(images/games-arkanoid.png) no-repeat}
+#j2{ left:50%; margin-left:-138.5px; top:215px; background:url(images/games-simon.png) no-repeat}
+#j3{ right:35px; top:215px; background:url(images/games-memotest.png) no-repeat}
+.btjugar{position:absolute; top:226px; left:50%; margin-left:-72.5px;}
+.expl{ position:absolute; width:277px; height:100px; color:#fff; text-align:center; left:0; top:290px;; font-size:19px}
+/*----------------*/
+.puntosganados{
+	text-align:center;
+	display:block;
+	width:50px;
+	height:50px;
+	font-size:40px;
+	color: #512A03;
+	position:absolute;
+	left:45px;
+	top: -20012px;
+	opacity:0;
+	filter:alpha(opacity=0);
+	z-index:1000;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius:25px;
+	border:1px solid #512A03;
+	background:#fff;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 1);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 1);
+}
+#bglightbox{width:100%; height:1600px; position:fixed; background:url(images/Vacio.gif) #000;opacity:.9; filter:alpha(opacity=90); z-index:4000; top:0; left:0;display:none; }
+#bglightbox2{width:100%; height:1600px; position:fixed; background:url(images/Vacio.gif) #000;opacity:.9; filter:alpha(opacity=90); z-index:4000; top:0; left:0;display:block; }
+#cronometro{ width:150px; height:76px;  background:url(images/arkanoid/cronometro.png) 10px center no-repeat; padding-left:58px; position:absolute; top:-20px; left:377px; color:#fff; line-height:76px; font-size:37px; font-weight:bold; }
+#btnvolver{position:absolute; left:5px; top:5px; z-index:500;
+-webkit-transition: all .3s ease-in-out;
+-moz-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+cursor:pointer;
+}
+#btnvolver:hover{
+	-webkit-transform: scale(1.05,1.05);   
+     -moz-transform: scale(1.05,1.05);  
+      -ms-transform: scale(1.05,1.05); 
+       -o-transform: scale(1.05,1.05); 
+          transform: scale(1.05,1.05);
+}
+#startmge{ text-align:center; font-size:14px; width:300px; height:30px; position:absolute; left:117px; top:480px; z-index:2000; color:#FFF; cursor:default}
+#loadarkanoid{ position:fixed; left:50%; top:50%; margin-top:-6px; margin-left:-8px;}
+/*-------------------------*/
+
+.puntosganados2{
+	text-align:center;
+	display:block;
+	width:50px;
+	height:50px;
+	font-size:40px;
+	color: #512A03;
+	position:absolute;
+	left:45px;
+	top: -20012px;
+	opacity:0;
+	filter:alpha(opacity=0);
+	z-index:1000;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius:25px;
+	border:1px solid #512A03;
+	background:#fff;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 1);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 1);
+}
+#score{ width:150px; height:76px;   position:absolute; top:-17px; left:0px; color:#fff; line-height:76px; font-size:30px; font-weight:bold;text-shadow: 2px 2px 10px rgba(150, 150, 150, 1);}
+
+#canvas img{ position:relative; top:210px; cursor:default}
+#im1{ left:30px}
+#im2{ left:20px;}
+#im3{ left:10px;}
+#mse{ text-align:center; position:relative; top:235px; height:88px; padding:0; line-height:50px; font-size:18px; color:#F4A203; vertical-align: top}
+#btncomenzar{
+	position:relative; 
+	left:0;
+	top:-20px !important;
+	padding:0;
+	cursor:pointer !important;
+	-webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;*/
+}
+#btncomenzar:hover{
+	-webkit-transform: scale(1.05,1.05);   
+     -moz-transform: scale(1.05,1.05);  
+      -ms-transform: scale(1.05,1.05); 
+       -o-transform: scale(1.05,1.05); 
+          transform: scale(1.05,1.05);
+}
+#mse img{  top:-20px !important;}
+
+#loadsimon{ position:fixed; left:50%; top:50%; margin-top:-6px; margin-left:-8px;}
+/*--------------------------------------------*/
+.puntosganados3{
+	text-align:center;
+	display:block;
+	width:50px;
+	height:50px;
+	font-size:40px;
+	color: #512A03;
+	position:absolute;
+	left: 50%;
+	margin-left:-30px;
+	top: -20012px;
+	opacity:0;
+	filter:alpha(opacity=0);
+	z-index:1000;
+	-webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+border-radius:25px;
+border:1px solid #512A03;
+background:#fff;
+-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 1);
+-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 1);
+box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 1);
+}
+#cronometro2{ width:150px; height:76px;  background:url(images/memotest/cronometro.png) left center no-repeat; padding-left:75px; position:absolute; bottom:3px; left:347px; color:#fff; line-height:76px; font-size:40px; font-weight:bold; }
+
+</style>
+<script type="text/javascript" src="js/panino.js"></script>
+<script type="text/javascript" src="js/comunes.js"></script>
+<script type="text/javascript" src="js/paninoOverlay.js"></script>
+<script type="text/javascript" src="js/transicion.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/paninoAJAX.js"></script>
+<script src="arkanoid.js"></script>
+<script>
+function arkanoid(){
+	ns.finarkanoid=1;
+	$('contenedorgeneral2').innerHTML='';
+	request(
+		'arkanoid.html',
+		function(r){
+			clearTimeout(ns.contador);
+			$('contenedorgeneral2').innerHTML=r;
+			ns.duration=60;
+			ns.contando=0;
+			ns.particles=[];
+			gravity = 1;
+			 x = 252;
+			 y = 478;
+			 dx = 4;//4
+			 dy = -6;//-6
+			 ctx;
+			 WIDTH=534;
+			 HEIGHT=540;
+			 padHeight=31;
+			 padWidth=106;
+			 cofre;
+			 pelota;
+			 pad;
+			 points=[];
+			 ladrillos;
+			 padx=214;
+			 pady=509;
+			 canvasMinX = 0;
+			 canvasMaxX = 0;
+			 ns.start=0;
+			ns.vidas=3;
+			ns.ladrillos=30;
+			ns.finarkanoid=0;
+
+			inicio();
+			(function(){
+						var pos=getOffset($('canvas'));
+						offsetX=pos.left;
+						offsetY=pos.top;
+						document.onmousemove=onMouseMove;
+						document.addEventListener('longpress', function(e) {
+							return false;
+						});
+				
+						document.addEventListener('longclick', function(e) {
+								return false;
+						});
+						panino.getO(document).addEvent("touchmove", handleTouchMove, false);
+						$('canvas').addEvent("touchstart",function(){initSounds();ns.start=1;}, false);
+			})();
+			(function(){/*$('tesoros').play();*/})();
+		},
+		{}
+	);
+}
+function simon(){
+	
+	
+	request(
+		'simon.html',
+		function(r){
+			$('contenedorgeneral2').innerHTML=r;
+			ns.luces=['images/simon/1_on.png','images/simon/2_on.png','images/simon/3_on.png','images/simon/4_on.png'];
+			ns.btns=['images/simon/1.png','images/simon/2.png','images/simon/3.png','images/simon/4.png'];
+			cola=[];
+			copy=[];
+			play=[];
+			ns.puntos=0;
+			ns.tiempo=0;
+			preloadImages();
+			//$('tesoros').play();
+		},
+		{}
+		
+	);
+}
+function memotest(){
+
+	request(
+		'memotest.html',
+		function(r){
+			$('contenedorgeneral2').innerHTML=r;
+				ns.duration=60;
+				uno=0;dos=0;aciertos=0;fin=0;empezado=0;
+				preloadImages2();
+				//$('tesoros').play();
+				IrBrajando();
+		},{});
+}
+function homes(){
+	ns.finarkanoid=1;
+	$('contenedorgeneral2').innerHTML='';
+	request(
+		'portada.html',
+		function(r){
+			$('contenedorgeneral2').innerHTML=r;
+		},{});
+}
+</script>
+
+</head>
+<body>
+
+<div id="contenedorgeneral2">
+<div id="cajabasedetodo">
+<img style="position:absolute; left:40px; top:50px" src="images/games-intro.png" width="600">
+<div class="logodisney"></div>
+
+<div id="j1"><img onclick="arkanoid();" class="btjugar" src="images/button-play-alt.png" width="145" height="51"><div class="expl">Rompé el cofre con la pelotita, llegá hasta el final y <strong>¡Ganá la partida!</strong></div></div>
+<div id="j2"><img onclick="simon();" class="btjugar" src="images/button-play-alt.png" width="145" height="51"><div class="expl">Jugá y demostrá que podés seguir el ritmo y los colores de los personajes <strong>Disney</strong>.</div></div>
+<div id="j3"><img onclick="memotest();" class="btjugar" src="images/button-play-alt.png" width="145" height="51"><div class="expl"><strong>¡Probá tu memoria!</strong> Recordá qué personaje aparece en cada ficha y sumá más chances.</div></div>
+
+
+</div>
+</div>
+</body>
+</html>
