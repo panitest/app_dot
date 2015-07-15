@@ -213,9 +213,11 @@ function draw(){
 			dy=-dy;
 			dx = 8 * ((x-(padx+padWidth/2))/padWidth);
 			//$('toc').play();
+			playAudio('sounds/toc.mp3',0);
 		}else{
 			drawFinal(x,y,dx,dy);
 			//$('wrong').play();
+			playAudio('sounds/wrong.mp3',0);
 			return;
 		}
 	}
@@ -234,6 +236,7 @@ function draw(){
 		ladrillos[row][col]=0;
 		ns.ladrillos--;
 		//$('success').play();
+		playAudio('sounds/success.mp3',0);
 		dy=-dy;
 		explosion(x,y);
 		
@@ -407,6 +410,7 @@ function registrar(nro){
 	$('im'+nro).src=ns.luces[parseInt(nro,10)-1];
 	setTimeout(function(){$('im'+nro).src=ns.btns[parseInt(nro,10)-1];},500);
 	//$('s'+nro).play();
+	playAudio('sounds/simon/'+nro+'.mp3',0);
 	test(nro);
 }
 function activar(){
@@ -438,6 +442,7 @@ function ejecutarCola(){
 	$('im'+cur).src=ns.luces[parseInt(cur,10)-1];
 	setTimeout(function(){$('im'+cur).src=ns.btns[parseInt(cur,10)-1];},200);
 	//$('s'+cur).play();
+	playAudio('sounds/simon/'+cur+'.mp3',0);
 	if(play.length>0){
 		setTimeout(ejecutarCola,800);
 	}else{
@@ -474,6 +479,7 @@ function test(nro){
 			openPerdiste();
 		}
 		//$('wrong').play();
+		playAudio('sounds/wrong.mp3',0);
 	}else{
 		if(copy.length<1){
 			
@@ -602,6 +608,7 @@ function ver(e,cual,el){
 		empezado=1;
 	}
 	//$('noc').play();
+	playAudio('sounds/noc.mp3',0);
 	el.a=getElementsByClassName('front',el)[0];
 	el.b=getElementsByClassName('back',el)[0];
 	el.a.style.transform='rotateX(180deg)';el.a.style.webkitTransform ='rotateX(180deg)';
@@ -619,6 +626,7 @@ function ver(e,cual,el){
 					_dos.className=_uno.className='fichabase animated flash';
 					aciertos++;
 					//$('success').play();
+					playAudio('sounds/success.mp3',0);
 					$('bonustiempo').innerHTML='+'+1;
 					$('bonustiempo').onMotionFinished=function(){
 						$('bonustiempo').style.top='-500px';
@@ -687,9 +695,9 @@ function playAudio(url,loop) {
 		
 		my_media = new Media(uri,
 				// success callback
-				 function () {/*ns.reproduciendo=1;*/alert('ok');},
+				 function () {/*ns.reproduciendo=1;*/},
 				// error callback
-				 function (err) { alert("playAudio():Audio Error: " + err.code); },l
+				 function (err) { /*alert("playAudio():Audio Error: " + err.code);*/ },l
 		);
 			   // Play audio
 		my_media.play();
