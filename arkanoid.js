@@ -701,4 +701,5 @@ function playAudio(url,loop) {
 		);
 			   // Play audio
 		my_media.play();
+		my_media.release();
 	}
