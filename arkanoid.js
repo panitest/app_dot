@@ -617,8 +617,8 @@ function ver(e,cual,el){
 	el.b=getElementsByClassName('back',el)[0];
 	el.a.style.transform='rotateX(180deg)';el.a.style.webkitTransform ='rotateX(180deg)';
 	el.b.style.transform='rotateX(0deg)';el.b.style.webkitTransform ='rotateX(0deg)';
-	el.old=el.onclick;
-	el.onclick=function(){};
+	el.old=el.ontouchstart;
+	el.ontouchstart=function(){};
 	el.cual=cual;
 	if(uno){dos=el;}else{uno=el;}
 	if(uno && dos){
@@ -666,8 +666,8 @@ function ver(e,cual,el){
 					_uno.b.style.transform='rotateX(180deg)';_uno.b.style.webkitTransform ='rotateX(180deg)';
 					_dos.a.style.transform='rotateX(0deg)';_dos.a.style.webkitTransform ='rotateX(0deg)';
 					_dos.b.style.transform='rotateX(180deg)';_dos.b.style.webkitTransform ='rotateX(180deg)';
-					_uno.onclick=_uno.old;
-					_dos.onclick=_dos.old;
+					_uno.ontouchstart=_uno.old;
+					_dos.ontouchstart=_dos.old;
 				},
 				1000
 			);
@@ -686,7 +686,7 @@ function IrBrajando(){
 	var barajas=shuffle(['1','2','3','4','5','6','1','2','3','4','5','6']);
 	var html='';
 	for(var i=0;i<12;i++){
-		html+='<div class="fichabase" data-indice="'+i+'" onMouseDown="return false" onClick="ver(event,&quot;ficha'+barajas[i]+'&quot;,this)">	<div class="flipper">		<div class="front">			<img src="images/memotest/fichas_base.png">		</div>		<div class="back">			<img src="images/memotest/ficha'+barajas[i]+'.png">		</div>	</div></div>';
+		html+='<div class="fichabase" data-indice="'+i+'" onMouseDown="return false" ontouchstart="ver(event,&quot;ficha'+barajas[i]+'&quot;,this)">	<div class="flipper">		<div class="front">			<img src="images/memotest/fichas_base.png">		</div>		<div class="back">			<img src="images/memotest/ficha'+barajas[i]+'.png">		</div>	</div></div>';
 	}
 	$('barajando').innerHTML=html;
 	
